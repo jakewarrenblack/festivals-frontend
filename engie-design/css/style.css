@@ -1,0 +1,256 @@
+body{
+  background:#f2f6f9;
+}
+
+/*FONT SIZINGS*/
+.t-peta {
+  font-size: 4.75rem;
+}
+
+.t-tera {
+  font-size: 3.375rem;
+}
+
+.t-giga {
+  font-size: 2.25rem;
+}
+
+.t-mega {
+  font-size: 1.75rem;
+}
+
+.t-kilo {
+  font-size: 1.5rem;
+}
+
+.t-hecto {
+  font-size: 1.25rem;
+}
+
+.t-deca {
+  font-size: 1.125rem;
+}
+
+.t-base {
+  font-size: 1rem;
+}
+
+.t-deci {
+  font-size: 0.875rem;
+}
+
+.t-centi {
+  font-size: 0.75rem;
+}
+
+.light {
+  font-weight: 300;
+}
+
+.myNav {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 10px 0px,
+    rgba(0, 0, 0, 0.06) 0px 4px 5px 0px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  font-family: "Lato";
+}
+
+.fa-pen {
+  color: #009de9;
+  padding-right: 0.5rem;
+}
+
+.myBtn {
+  margin: 0.5rem;
+  border-radius: 0px;
+}
+
+.myJumbotron {
+  height: 45vw;
+  display: grid;
+  place-items: center;
+  color: white;
+  position: relative;
+}
+
+.myJumbotron::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("../img/main.jpg");
+  background-position: center;
+  background-position-y: 70%;
+  filter: brightness(20%);
+  color: white;
+}
+
+.module-inside {
+  position: relative;
+}
+
+.module-inside-bottom {
+  position: relative;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.navbar-brand {
+  padding-bottom: 0.4rem;
+}
+
+.navbar {
+  padding: 0rem 1rem;
+}
+
+.navbar-nav a {
+  border-bottom: 2px solid transparent;
+  padding: 1rem;
+}
+
+.navbar-nav a:hover {
+  border-bottom: 2px solid #009de9;
+}
+
+.reverseNav {
+  flex-direction: row-reverse;
+}
+
+
+.quoteBtn h2, .actsBtn h2, .venuesBtn h2{
+  text-transform:uppercase;
+  color:white;
+  font-family:"Lato",sans-serif;
+  font-weight:100;
+}
+
+.quoteBtn{
+  background:#005288;
+  padding:2rem;
+  border-radius:71px;
+  text-align:center;
+
+}
+.actsBtn{
+  background:#007873;border-radius:71px;padding:2rem;
+}
+.venuesBtn{
+  background:#2B485C;border-radius:71px;padding:2rem;
+}
+.btnsRow{
+  margin-left:2rem;
+  margin-right:2rem;
+}
+
+.actionBtn{
+  transition-property: transform;
+  transition-duration: 0.5s;
+  padding-top:3rem;
+  padding-bottom:3rem;
+}
+
+.actionBtn:hover{
+  cursor: pointer;
+  transform:scale(1.1);
+}
+
+.engie-head{
+  color:#18C6CD;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  }
+
+  .myTitle{
+    color:#212121;
+    font-weight:800;
+    text-transform:uppercase;
+  }
+
+.findTickets{
+  color:#15C2D2;
+}
+
+
+
+/* .circular{
+  width: 50vw;
+  height: 50vw;
+  overflow: hidden;
+  border-radius: 50%;
+
+}
+
+.circular img{
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+} */
+
+
+.backBox{
+  background:#fff;
+  padding:4rem;
+  position:relative;
+  /* transition: transform 0.3s; */
+}
+
+.backBoxB{
+  background:#fff;
+  padding:4rem;
+  position:relative;
+  text-align:right;
+}
+
+.frontBoxB{
+  position:absolute;
+  right:60%;
+  top:80%;
+}
+
+.frontBox{
+  position:absolute;
+  top:80%;
+  left:60%
+}
+
+.frontBox{
+  animation: slide-left 2s infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.frontBoxB{
+  animation: slide-right 2s infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+@keyframes slide-right{
+  from{
+    margin-right:100%;
+  }
+  to{
+    margin-right:0%;
+  }
+}
+
+@keyframes slide-left{
+  from{
+    margin-left:100%;
+  }
+  to{
+    margin-left:0%;
+  }
+}
+
