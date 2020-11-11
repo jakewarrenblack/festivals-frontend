@@ -1,5 +1,5 @@
-body{
-  background:#f2f6f9;
+body {
+  background: #f2f6f9;
 }
 
 /*FONT SIZINGS*/
@@ -97,12 +97,24 @@ body {
   font-family: "Lato", sans-serif;
 }
 
+/* .myCard {
+  height: 30rem;
+}
+
+.myCard img {
+  height: 100%;
+  object-fit: cover;
+} */
+
 .navbar-brand {
   padding-bottom: 0.4rem;
 }
 
 .navbar {
-  padding: 0rem 1rem;
+  /* padding: 0rem 1rem; */
+  position: fixed;
+  z-index: 1;
+  width: 100%;
 }
 
 .navbar-nav a {
@@ -118,65 +130,76 @@ body {
   flex-direction: row-reverse;
 }
 
-
-.quoteBtn h2, .actsBtn h2, .venuesBtn h2{
-  text-transform:uppercase;
-  color:white;
-  font-family:"Lato",sans-serif;
-  font-weight:100;
+.quoteBtn h2,
+.actsBtn h2,
+.venuesBtn h2 {
+  text-transform: uppercase;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
 }
 
-.quoteBtn{
-  background:#005288;
-  padding:2rem;
-  border-radius:71px;
-  text-align:center;
+.quoteBtn {
+  background: #005288;
+  padding: 2rem;
+  border-radius: 71px;
+  text-align: center;
+}
+.actsBtn {
+  background: #007873;
+  border-radius: 71px;
+  padding: 2rem;
+}
+.venuesBtn {
+  background: #2b485c;
+  border-radius: 71px;
+  padding: 2rem;
+}
+.btnsRow {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
 
-}
-.actsBtn{
-  background:#007873;border-radius:71px;padding:2rem;
-}
-.venuesBtn{
-  background:#2B485C;border-radius:71px;padding:2rem;
-}
-.btnsRow{
-  margin-left:2rem;
-  margin-right:2rem;
-}
-
-.actionBtn{
+.actionBtn {
   transition-property: transform;
   transition-duration: 0.5s;
-  padding-top:3rem;
-  padding-bottom:3rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
-.actionBtn:hover{
+.actionBtn:hover {
   cursor: pointer;
-  transform:scale(1.1);
+  transform: scale(1.1);
 }
 
-.engie-head{
-  color:#18C6CD;
+.engie-head {
+  color: #18c6cd;
 }
 
 .card-img-top {
   width: 100%;
   height: 30vh;
   object-fit: cover;
-  }
-
-  .myTitle{
-    color:#212121;
-    font-weight:800;
-    text-transform:uppercase;
-  }
-
-.findTickets{
-  color:#15C2D2;
 }
 
+.card img {
+  width: 100%;
+}
 
+.card-img-topFull {
+  width: 100%;
+  object-fit: cover;
+}
+
+.myTitle {
+  color: #212121;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.findTickets {
+  color: #15c2d2;
+}
 
 /* .circular{
   width: 50vw;
@@ -193,64 +216,201 @@ body {
   width: auto;
 } */
 
-
-.backBox{
-  background:#fff;
-  padding:4rem;
-  position:relative;
+.backBox {
+  background: #fff;
+  padding: 4rem;
+  position: relative;
   /* transition: transform 0.3s; */
 }
 
-.backBoxB{
-  background:#fff;
-  padding:4rem;
-  position:relative;
-  text-align:right;
+.backBoxB {
+  background: #fff;
+  padding: 4rem;
+  position: relative;
+  text-align: right;
 }
 
-.frontBoxB{
-  position:absolute;
-  right:60%;
-  top:80%;
+.frontBoxB {
+  position: absolute;
+  margin-top: 15%;
+  /* right:60%;
+  top:80%; */
 }
 
-.frontBox{
-  position:absolute;
-  top:80%;
-  left:60%
+.frontBox {
+  position: absolute;
+  /* top:80%;
+  left:60% */
 }
 
-.frontBox{
+.frontBox {
   animation: slide-left 2s infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.frontBoxB{
+.frontBoxB {
   animation: slide-right 2s infinite;
   animation-play-state: paused;
   animation-delay: calc(var(--scroll) * -1s);
   animation-iteration-count: 1;
   animation-fill-mode: both;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-@keyframes slide-right{
-  from{
-    margin-right:100%;
+@keyframes slide-right {
+  from {
+    margin-right: 50%;
   }
-  to{
-    margin-right:0%;
-  }
-}
-
-@keyframes slide-left{
-  from{
-    margin-left:100%;
-  }
-  to{
-    margin-left:0%;
+  to {
+    margin-right: 10%;
   }
 }
 
+@keyframes slide-left {
+  from {
+    margin-left: 50%;
+  }
+  to {
+    margin-left: 10%;
+  }
+}
+.fullImg {
+  background: url("https://images.unsplash.com/photo-1453090927415-5f45085b65c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+  height: 100%;
+}
+
+.fullImg img {
+  vertical-align: top;
+  width: 100%;
+  opacity: 0;
+}
+
+.cardOverlay {
+  /* height: calc(320px - 2rem); */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  background-color: transparent;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    padding 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .cardOverlay {
+  background: #fff;
+}
+
+.cardTitle {
+  color: #fff;
+  transform: translateY(calc(450px - 3rem - 100%));
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover .cardTitle {
+  color: #000;
+  transform: translateY(0);
+}
+
+.cardOverlay .cardTitle {
+  transform: translateY(calc(320px - 3rem - 100%));
+  color: white;
+}
+
+.featuredCardImg {
+  width: 30%;
+}
+
+.featuredCardImg img {
+  max-width: 100%;
+}
+
+.labelHidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px, 0px 0px);
+  /*This is so the screen reader can still see it*/
+}
+
+.form-control {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid #e0e0e0;
+  border-radius: 0px;
+}
+
+.form-control:focus {
+  border-bottom: 2px solid #009de9;
+  box-shadow: none;
+}
+
+/*Change placeholder text colour*/
+::-webkit-input-placeholder {
+  /* Edge */
+  color: #757575;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #757575;
+}
+
+::placeholder {
+  color: #757575;
+}
+
+form {
+  background: #fff;
+  padding: 5%;
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(136, 64, 64, 0.5);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.companyNameFooter {
+  padding: 5%;
+}
+
+.rowSpacer {
+  margin-top: 15rem !important;
+}
+
+.rowSpacerHalf {
+  margin-top: 7.5rem !important;
+}
+
+.footer {
+  padding-top: 10%;
+  background: #fff;
+  padding: 5%;
+  border-bottom: 4px solid #009de9;
+}
+
+.footerItem {
+  list-style: none;
+  padding-top: 2%;
+}
+
+.footerList {
+  width: 100%;
+  border-top: 2px solid #e0e0e0;
+}
+
+.fab {
+  color: #009de9;
+}
