@@ -1,6 +1,16 @@
 body {
   background: #f2f6f9;
 }
+
+/*Preventing horizontal scroll on mobile*/
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  position: relative;
+}
+
 .fade {
   opacity: 0;
 }
@@ -695,11 +705,15 @@ table th {
   border: none;
 }
 
+strong {
+  color: #00aaff;
+}
+
 /*Necessary to remove nowrap on horizontal scrolling section*/
 /*Also applying hover effects by default on the 'options' section's cards.*/
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-width: 320px) and (max-width: 480px) {
+@media only screen and (min-width: 320px) and (max-width: 500px) {
   .scrolling-wrapper {
     flex-wrap: wrap;
   }
