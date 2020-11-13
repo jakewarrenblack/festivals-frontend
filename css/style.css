@@ -1,6 +1,9 @@
 body {
   background: #f2f6f9;
 }
+.fade {
+  opacity: 0;
+}
 
 /*FONT SIZINGS*/
 .t-peta {
@@ -63,7 +66,16 @@ body {
   border-radius: 0px;
 }
 
-.myJumbotron {
+.jumbotron {
+  color: white;
+  background-image: url("../img/main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60vh;
+}
+
+/* .myJumbotron {
   height: 45vw;
   display: grid;
   place-items: center;
@@ -91,9 +103,8 @@ body {
 
 .module-inside-bottom {
   position: relative;
-}
-
-body {
+} */
+*/ body {
   font-family: "Lato", sans-serif;
 }
 
@@ -112,14 +123,18 @@ body {
 
 .navbar {
   padding: 0rem 1rem;
-  position: fixed;
-  z-index: 1;
+  /* position: fixed; */
+  /* z-index: 1; */
   width: 100%;
 }
 
 .navbar-nav a {
   border-bottom: 2px solid transparent;
   padding: 1rem;
+}
+
+.navbar-nav button {
+  align-self: auto;
 }
 
 .navbar-nav a:hover {
@@ -300,10 +315,13 @@ body {
   }
 }
 .fullImg {
-  background: url("https://images.unsplash.com/photo-1453090927415-5f45085b65c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1331&q=80");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(135deg, #00aaff, #23d2b5);
   padding: 1rem;
+  height: 100%;
+  min-height: 40vw;
+}
+
+.fullImg .card-body {
   height: 100%;
 }
 
@@ -330,8 +348,49 @@ body {
 
 .cardTitle {
   color: #fff;
-  transform: translateY(calc(450px - 3rem - 100%));
+  transform: translateY(calc(250px - 3rem - 100%));
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cardOverlay button {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  color: white !important;
+}
+
+.hide ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hide button {
+  align-self: center;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+button {
+  display: inline-flex;
+  align-self: center;
+  flex-direction: row;
+}
+
+.hide {
+  transform: translateY(calc(500px));
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: none;
+  visibility: hidden;
+}
+
+.fullImg:hover > * .hide {
+  display: block !important;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hide {
+  display: none;
 }
 
 .card:hover .cardTitle {
@@ -339,9 +398,22 @@ body {
   transform: translateY(0);
 }
 
-.cardOverlay .cardTitle {
+.card:hover button {
+  color: #000;
+  transform: translateY(0);
+}
+
+/* .cardOverlay .cardTitle {
   transform: translateY(calc(320px - 3rem - 100%));
   color: white;
+} */
+
+.fullImg {
+  position: relative;
+}
+
+.buttonContain {
+  width: 100%;
 }
 
 .featuredCardImg {
@@ -561,4 +633,142 @@ table th {
 
 .form-control {
   margin-bottom: 1rem;
+}
+
+.mainText {
+  margin-bottom: 5rem;
+}
+
+.about_text p:before {
+  content: "";
+  width: 4rem;
+  height: 0.1rem;
+  background-color: #009de9;
+  margin-right: 50px;
+  margin-left: -5rem;
+  -webkit-transform: translateY(20px);
+  -o-transform: translateY(20px);
+  transform: translateY(20px);
+  display: block;
+}
+
+.about_text p {
+  margin-left: 5rem;
+}
+
+.noPad {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+.mainImg {
+  max-width: 100%;
+  height: auto;
+}
+
+.services {
+  padding-left: 0;
+  margin-left: 1rem;
+}
+
+.services li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.schedule p {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.engieGradient {
+  background-image: linear-gradient(135deg, #00aaff, #23d2b5);
+}
+.scrolling-wrapper {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.card-block {
+  height: 100%;
+  border: none;
+}
+
+/*Necessary to remove nowrap on horizontal scrolling section*/
+/*Also applying hover effects by default on the 'options' section's cards.*/
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .scrolling-wrapper {
+    flex-wrap: wrap;
+  }
+  .hide {
+    transform: translateY(0);
+    display: block !important;
+    visibility: visible;
+  }
+  .cardOverlay {
+    background-color: #fff;
+  }
+
+  .cardTitle {
+    color: #000;
+    transform: translateY(0);
+  }
+
+  .cardOverlay button {
+    color: #000;
+    transform: translateY(0);
+  }
+
+  /*Turn off fade in effects on mobile*/
+  .fade {
+    opacity: 1 !important;
+  }
+
+  .firstImg {
+    display: none;
+  }
+
+  .rowSpacer {
+    margin-top: 2rem !important;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .scrolling-wrapper {
+    flex-wrap: wrap;
+  }
+  .hide {
+    transform: translateY(0);
+    display: block !important;
+    visibility: visible;
+  }
+  .cardOverlay {
+    background-color: #fff;
+  }
+
+  .cardTitle {
+    color: #000;
+    transform: translateY(0);
+  }
+
+  .cardOverlay button {
+    transform: translateY(0);
+  }
+
+  /*Turn off fade in effects on mobile*/
+  .fade {
+    opacity: 1 !important;
+  }
+
+  .firstImg {
+    display: none;
+  }
+
+  .rowSpacer {
+    margin-top: 2rem !important;
+  }
 }
