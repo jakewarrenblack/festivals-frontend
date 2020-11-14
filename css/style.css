@@ -324,11 +324,35 @@ body {
     margin-left: 10%;
   }
 }
+
+.fullImg1 {
+  background-image: url("../img/fullImg1.jpg");
+}
+
+.fullImg2 {
+  background-image: url("../img/fullImg2.jpg");
+}
+
+.fullImg3 {
+  background-image: url("../img/fullImg3.jpg");
+}
+
+.fullImg4 {
+  background-image: url("../img/slane_castle.jpg");
+}
+
 .fullImg {
-  background-image: linear-gradient(135deg, #00aaff, #23d2b5);
+  /* background-image: linear-gradient(135deg, #00aaff, #23d2b5); */
+  background-position: center;
+  background-size: cover;
   padding: 1rem;
   height: 100%;
   min-height: 40vw;
+  border: none !important;
+}
+
+.min100 {
+  min-height: 100%;
 }
 
 .fullImg .card-body {
@@ -370,6 +394,11 @@ body {
 .hide ul {
   list-style: none;
   padding-left: 0;
+}
+
+#decorated {
+  list-style-type: disc;
+  padding-left: 1rem;
 }
 
 .hide button {
@@ -542,6 +571,16 @@ form {
   border-radius: 20px;
   padding: 5%;
   padding-top: 2%;
+  width: 95%;
+}
+
+.eventTable {
+  width: 95%;
+}
+
+.eventTable table {
+  overflow: scroll;
+  width: 100%;
 }
 
 .searchBar {
@@ -691,9 +730,22 @@ table th {
   margin-top: 0.5rem;
 }
 
+/*Slightly modified version of Engie's corporate gradient*/
 .engieGradient {
-  background-image: linear-gradient(135deg, #00aaff, #23d2b5);
+  background-image: linear-gradient(
+    0deg,
+    rgba(209, 209, 209, 0.88) 0%,
+    rgba(0, 202, 255, 1) 50%,
+    rgba(35, 210, 181, 1) 100%
+  );
 }
+
+/*Accommodates the gradient wrapper*/
+.underline {
+  border-bottom: 4px solid;
+  border-image: linear-gradient(135deg, #00aaff, #23d2b5) 20% round;
+}
+
 .scrolling-wrapper {
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -709,11 +761,42 @@ strong {
   color: #00aaff;
 }
 
+.hashTagGreen {
+  background: #6ed2b1;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.hashTagBlue {
+  background: #009de9;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+
+.myImgTop {
+  border-radius: 0 !important;
+}
+
+table td,
+.table th {
+  padding: 0.75rem;
+}
+
+/* .collapse.dont-collapse-sm {
+  display: block;
+  height: auto !important;
+  visibility: visible;
+} */
+
 /*Necessary to remove nowrap on horizontal scrolling section*/
 /*Also applying hover effects by default on the 'options' section's cards.*/
 /* Smartphones (portrait and landscape) ----------- */
 
-@media only screen and (min-width: 320px) and (max-width: 500px) {
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
   .scrolling-wrapper {
     flex-wrap: wrap;
   }
@@ -741,17 +824,67 @@ strong {
     opacity: 1 !important;
   }
 
+  .fullWidth {
+    width: 95%;
+  }
+
   .firstImg {
     display: none;
   }
 
   .rowSpacer {
     margin-top: 2rem !important;
+  }
+  .featuredCardImg {
+    width: 100%;
+  }
+  table {
+    table-layout: auto;
+  }
+
+  table td,
+  .table th {
+    padding: 0;
+    font-size: 0.9rem;
+  }
+
+  table th {
+    padding-right: 1.5rem;
+  }
+
+  .tableHeaderResponsive {
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center !important;
+  }
+
+  .responsiveFilters {
+    margin: auto;
+    justify-content: center;
+  }
+
+  .tableHeaderResponsive h1 {
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableHeaderResponsive .searchContain {
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .tableHeaderResponsive .fa-user-contain {
+    margin: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
 /* iPads (portrait and landscape) ----------- */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .scrolling-wrapper {
     flex-wrap: wrap;
   }
@@ -773,7 +906,6 @@ strong {
     transform: translateY(0);
   }
 
-  /*Turn off fade in effects on mobile*/
   .fade {
     opacity: 1 !important;
   }
@@ -785,4 +917,4 @@ strong {
   .rowSpacer {
     margin-top: 2rem !important;
   }
-}
+} */
