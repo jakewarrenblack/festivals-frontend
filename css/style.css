@@ -103,9 +103,25 @@ body {
 }
 
 .fa-headphones,
+.fa-pen,
 .fa-trash {
   color: #009de9;
   padding-right: 0.5rem;
+}
+
+table .fa-trash,
+table .fa-pen {
+  cursor: pointer;
+}
+
+table .fa-trash:hover,
+table .fa-pen:hover {
+  transform: scale(1.2);
+  color: #0069d9;
+}
+
+table a:hover {
+  cursor: pointer;
 }
 
 .paginateContain {
