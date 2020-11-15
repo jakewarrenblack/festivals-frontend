@@ -14,21 +14,34 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/fca6ae4c3f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <title>Hello, world!</title>
+    <title>Festivals Co | Home</title>
 
 
   </head>
   <body>
-    <nav class="navbar t-base myNav navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><i class="fas fa-pen"></i><strong>Festivals Co</strong></a>
+    
+    <div class="row d-flex justify-content-center text-center">
+    <a href="#about">
+      <i  id="scrollDown" class="text-white fas fa-chevron-down" aria-hidden="true"></i>
+    </a>
+  </div>
+
+    <a id="top"></a>
+    <div id="backTop" class="backTop">
+      <a href="#top"> <i class="fas fa-chevron-up" aria-hidden="true"></i></a>
+    </div>
+    <nav class="navbar sticky-top t-base myNav navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><i class="fas fa-headphones"></i><strong>Festivals Co</strong></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse reverseNav navbar-collapse " id="navbarNavAltMarkup">
         <div class="navbar-nav">
           <a class="nav-link" href="ui-kit.html">UI Kit</a>
-          <a class="nav-link" href="#">About</a>
-          <a class="nav-link" href="#">Contact</a>
+          <a class="nav-link" href="#about">About</a>
+          <a class="nav-link" href="#contact">Contact</a>
+          <a class="nav-link" href="#schedule">Schedule</a>
+          <a class="nav-link" href="#packages">Packages</a>
           <button type="button" class="btn myBtn btn-primary">Login</button>
           <button type="button" class="btn myBtn btn-primary">Signup</button>
 
@@ -36,10 +49,10 @@
       </div>
     </nav>
 
-    <div class="jumbotron d-flex align-items-center jumbotron-fluid">
+    <div id="mainImg" class="jumbotron d-flex align-items-center jumbotron-fluid">
       <div class="container text-center">
         <h1 class="display-4">Unforgettable Festival Experiences.</h1>
-        <p>Providing quality service, unrivalled customer support.</p>
+        <p>Providing quality service, and unrivalled customer support.</p>
       </div>
     </div>
     <br>
@@ -47,7 +60,7 @@
 
 
 <div class="row fade">
-  <div class="col-sm-10 col-md-12 col-lg-6 align-self-center about_text mainText">
+  <div id="about" class="col-sm-10 col-md-12 col-lg-6 align-self-center about_text mainText">
     <h1 class="t-peta">
       WHAT MAKES US THE
       <strong>BEST IN MUSIC FESTIVALS?</strong>
@@ -56,12 +69,12 @@
       I'm baby swag irony listicle cardigan salvia mlkshk, bitters street art air plant bushwick. VHS four loko trust fund tousled butcher direct trade, craft beer cloud bread yuccie ethical pitchfork green juice etsy bicycle rights. Fam meggings chambray normcore +1, pabst chartreuse 8-bit raw denim copper mug subway tile yuccie. Crucifix cred vape dreamcatcher, pitchfork literally shabby chic pour-over listicle biodiesel church-key.    </p>
   </div>
   <div class="col-sm-12 col-md-6 noPad">
-<img class="mainImg firstImg" src="https://images.unsplash.com/photo-1506157999258-a35364384ce9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+<img class="mainImg firstImg" src="img/firstImg.jpg">
   </div>
 </div>
 <div class="row fade serviceInfo rowSpacer">
   <div class="col-md-12 col-lg-6 noPad">
-    <img class="mainImg" src="https://images.unsplash.com/photo-1505842465776-3b4953ca4f44?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+    <img class="mainImg" src="img/mainImg2.jpg">
   </div>
   <div class="col-md-12 col-lg-6 d-flex flex-row align-items-center justify-content-center">
 <div class="col-sm-12 col-md-10 pt-5 align-self-center">
@@ -105,7 +118,7 @@
 </div>
 <div class="row engieGradient d-flex justify-content-center text-center rowSpacer">
   <div class="row justify-content-center text-center">
-    <div class="col-sm-12 col-md-6"><h1 class="t-peta text-white font-weight-bold">2021 EVENT SCHEDULE</h1>
+    <div id="schedule" class="col-sm-12 col-md-6"><h1 class="t-peta text-white font-weight-bold">2021 EVENT SCHEDULE</h1>
       <p class="t-deca text-white pt-">Check out some of the amazing acts we're hosting in the coming year. Please note that all bookings are subject to change.</p>
     </div>
   </div>
@@ -115,7 +128,7 @@
       <div class="col-md-12 col-lg-3 col-sm-12 pb-4">
 				<div class="card card-block">
           <div class="myCard">
-            <img src="https://cdn.pixabay.com/photo/2016/09/10/11/11/musician-1658887_960_720.jpg" class="card-img-top">
+            <img src="img/musician1.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Nasty Cherry</h5>
               <p class="card-text">Academy Green Room</p>
@@ -131,7 +144,7 @@
       <div class="col-md-12 col-lg-3 col-sm-12 pb-4">
 				<div class="card card-block">
           <div class="myCard">
-            <img src="https://cdn.pixabay.com/photo/2016/11/23/18/05/blurry-1854113_960_720.jpg" class="card-img-top">
+            <img src="img/musician2.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Miles Davis</h5>
               <p class="card-text">Academy Green Room</p>
@@ -149,7 +162,7 @@
       <div class="collapse col-md-12 col-lg-3  col-sm-12 pb-4" id="collapseExample">
 				<div class="card card-block">
           <div class= "myCard">
-            <img src="https://cdn.pixabay.com/photo/2020/07/23/11/58/man-5431169_960_720.jpg" class="card-img-top">
+            <img src="img/musician3.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Electric Six</h5>
               <p class="card-text">Academy Green Room</p>
@@ -166,7 +179,7 @@
 				<div class="card card-block card-1">
           <div class="card card-block card-1">
             <div class= "myCard">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1508695666381-69deeaa78ccb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                <img class="card-img-top" src="img/musician4.jpg">
               <div class="card-body underline myCardBody">
                 <h5 class="card-title t-deca myTitle">BILLY RAY CYRUS</h5>
                 <p class="card-text">Academy Green Room</p>
@@ -183,7 +196,7 @@
       <div class="collapse col-md-12 col-lg-3  col-sm-12 pb-4" id="collapseExample">
 				<div class="card card-block">
           <div class="myCard">
-            <img src="https://cdn.pixabay.com/photo/2016/09/10/11/11/musician-1658887_960_720.jpg" class="card-img-top">
+            <img src="img/musician1.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Nasty Cherry</h5>
               <p class="card-text">Academy Green Room</p>
@@ -199,7 +212,7 @@
       <div class="collapse col-md-12 col-lg-3  col-sm-12 pb-4" id="collapseExample">
 				<div class="card card-block">
           <div class="myCard">
-            <img src="https://cdn.pixabay.com/photo/2016/11/23/18/05/blurry-1854113_960_720.jpg" class="card-img-top">
+            <img src="img/musician2.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Miles Davis</h5>
               <p class="card-text">Academy Green Room</p>
@@ -215,7 +228,7 @@
       <div class="collapse col-md-12 col-lg-3  col-sm-12 pb-4" id="collapseExample">
 				<div class="card card-block">
           <div class= "myCard">
-            <img src="https://cdn.pixabay.com/photo/2020/07/23/11/58/man-5431169_960_720.jpg" class="card-img-top">
+            <img src="img/musician3.jpg" class="card-img-top">
             <div class="card-body underline myCardBody">
               <h5 class="card-title t-deca myTitle">Electric Six</h5>
               <p class="card-text">Academy Green Room</p>
@@ -232,7 +245,7 @@
 				<div class="card card-block card-1">
           <div class="card card-block card-1">
             <div class= "myCard">
-                <img class="card-img-top" src="https://images.unsplash.com/photo-1508695666381-69deeaa78ccb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                <img class="card-img-top" src="img/musician4.jpg">
               <div class="card-body underline myCardBody">
                 <h5 class="card-title t-deca myTitle">BILLY RAY CYRUS</h5>
                 <p class="card-text">Academy Green Room</p>
@@ -253,8 +266,8 @@
 
 <div class="row fade d-flex rowSpacerHalf justify-content-center ">
   <div class="col-12 text-center">
-  <h1 class="t-peta engie-head pt-5 text-center font-weight-bold pb-5">OPTIONS</h1>
-  <p class="t-deca pb-4">Packages to suit your needs, whatever your budget.</p>
+  <h1  id="packages" class="t-peta engie-head pt-5 text-center font-weight-bold pb-5">PACKAGES</h1>
+  <p  class="t-deca pb-4">Packages to suit your needs, whatever your budget.</p>
 </div>
 </div>
 <div class="row  fullImages fade justify-content-between">
@@ -360,7 +373,7 @@
 <div class="col-lg-12">
   <div class="card d-flex flex-wrap mb-lg-0 mb-md-4 flex-row align-items-end">
     <div class="featuredCardImg">
-<img class="card-img-top myImgTop" src="https://images.unsplash.com/13/unsplash_523b1f5aafc42_1.JPG?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1354&q=80">
+<img class="card-img-top myImgTop" src="img/arena.jpg">
     </div>
     <div class="card-body d-flex flex-column align-items-baseline">
       <span class="hashTagGreen">#popular</span>
@@ -411,11 +424,20 @@
 </div>
 <!--END OF VENUES SECTION-->
 
+
+
+<div class="row fade d-flex rowSpacerHalf justify-content-center ">
+  <div class="col-12 text-center">
+  <h1 class="t-peta engie-head pt-5 text-center font-weight-bold pb-5">Event Viewer</h1>
+  <p class="t-deca pb-4">Sort upcoming events by date.</p>
+</div>
+</div>
+
 <!--EVENT VIEWER-->
 <div class="container-fluid fade d-flex align-items-center flex-column">
-  <div class="col-lg-10 col-md-12 col-sm-12 dashboardContain d-flex rowSpacer flex-column">
+  <div class="col-lg-10  col-md-12 col-sm-12 dashboardContain d-flex flex-column">
     <!--ENTIRE LEFT SIDE-->
-    <div class="row">
+    <div class="row s">
     <div class="col-lg-4 col-md-10 col-sm-12 calendar fullWidth mx-auto">
       <div class="row d-flex align-items-baseline justify-content-between">
       <h2>Nov 2020</h2>
@@ -592,7 +614,7 @@
 
 
 
-<div class="row fade d-flex rowSpacer justify-content-center">
+<div  id="contact" class="row fade d-flex rowSpacer justify-content-center">
   <h1 class="t-peta engie-head pt-5 pb-5">Contact Us</h1>
 </div>
 

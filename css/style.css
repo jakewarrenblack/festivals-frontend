@@ -6,11 +6,43 @@ body {
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   position: relative;
 }
 
+.fa-chevron-down {
+  -webkit-animation: action 1s infinite alternate;
+  animation: action 1s infinite alternate;
+
+  width: 50px;
+  margin: auto;
+  position: absolute;
+  font-size: 10rem;
+  text-align: center;
+  top: 85vh;
+  right: 50vw;
+  z-index: 10000;
+}
+@-webkit-keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes action {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*Rows with class of date are invisible until fully within view.*/
 .fade {
   opacity: 0;
 }
@@ -66,9 +98,33 @@ body {
   font-family: "Lato";
 }
 
-.fa-pen {
+.navbar {
+  position: fi;
+}
+
+.fa-headphones,
+.fa-trash {
   color: #009de9;
   padding-right: 0.5rem;
+}
+
+.paginateContain {
+  background: transparent;
+  width: 50%;
+  margin-left: auto;
+}
+
+#dropdownMenuButton {
+  background: transparent;
+  color: black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+}
+
+#dropdownMenuButton:after {
+  display: none;
 }
 
 .myBtn {
@@ -78,11 +134,27 @@ body {
 
 .jumbotron {
   color: white;
+
+  height: 100vh;
+  position: relative;
+}
+
+.jumbotron::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
   background-image: url("../img/main.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 60vh;
+  filter: brightness(40%);
+}
+
+.jumbotron .container {
+  position: relative;
 }
 
 /* .myJumbotron {
@@ -575,7 +647,8 @@ form {
 }
 
 .eventTable {
-  width: 95%;
+  width: 100%;
+  margin-left: 0 !important;
 }
 
 .eventTable table {
@@ -612,6 +685,14 @@ form {
   background: #fff;
 }
 
+.userTable tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+
+.userTable {
+  background: #fff;
+}
+
 table {
   table-layout: fixed;
 }
@@ -624,6 +705,11 @@ table th {
 
 .tableCol {
   border-radius: 20px;
+  padding: 2%;
+}
+
+.userTableCont {
+  background: #fff;
   padding: 2%;
 }
 
@@ -648,7 +734,13 @@ table th {
   font-size: 2rem;
 }
 
+.paginateArrow {
+  color: #000;
+  font-size: 1rem;
+}
+
 .paginationRow {
+  align-self: center !important;
   margin-top: 2%;
 }
 
@@ -753,7 +845,7 @@ table th {
 }
 
 .card-block {
-  height: 100%;
+  /* height: 100%; */
   border: none;
 }
 
@@ -786,6 +878,72 @@ table td,
   padding: 0.75rem;
 }
 
+.backTop i:hover {
+  filter: brightness(2);
+  transform: scale(1.2);
+}
+
+.backTop i {
+  font-size: 4rem;
+  position: fixed;
+  bottom: 5px;
+  right: 20px;
+  color: #009de9;
+  border-radius: 15%;
+  padding: 5px;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.alert-engie {
+  background: #009934;
+  border-radius: 0px;
+  color: white;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.error {
+  background: #cc0033;
+}
+
+.warning {
+  background: #e07602;
+}
+
+.language {
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.eng {
+  background-image: url("../img/svg/gb.svg");
+}
+.es {
+  background-image: url("../img/svg/es.svg");
+}
+
+.fr {
+  background-image: url("../img/svg/fr.svg");
+}
+
+.de {
+  background-image: url("../img/svg/de.svg");
+}
+
+.it {
+  background-image: url("../img/svg/it.svg");
+}
+
+.ru {
+  background-image: url("../img/svg/ru.svg");
+}
+
 /* .collapse.dont-collapse-sm {
   display: block;
   height: auto !important;
@@ -800,11 +958,29 @@ table td,
   .scrolling-wrapper {
     flex-wrap: wrap;
   }
+
+  .eventTable {
+    width: 95%;
+    margin-left: auto !important;
+  }
+
+  th .fas {
+    display: none;
+  }
+  .paginateContain {
+    width: 100%;
+    margin-left: 0;
+  }
   .hide {
     transform: translateY(0);
     display: block !important;
     visibility: visible;
   }
+
+  .t-peta {
+    font-size: 4rem;
+  }
+
   .cardOverlay {
     background-color: #fff;
   }
@@ -852,6 +1028,15 @@ table td,
     padding-right: 1.5rem;
   }
 
+  .userTableCont {
+    overflow-x: auto;
+  }
+
+  .userTable th {
+    margin-left: 1rem;
+    padding: 1rem;
+  }
+
   .tableHeaderResponsive {
     margin: auto;
     flex-direction: column;
@@ -880,6 +1065,16 @@ table td,
     margin: auto;
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .paginationRow {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    align-self: end !important;
+  }
+
+  #scrollDown {
+    display: none !important;
   }
 }
 
